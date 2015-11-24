@@ -1,7 +1,7 @@
 # karaf-assembly-test
 Test Karaf Assembly Plugin
 
-Note: ipojo features file don't have "features" classifier, so you need to handle this manually ...
+Note: ipojo features file doesn't have "features" classifier, so you need to handle this manually ...
 
 Download this file:
 https://repo1.maven.org/maven2/org/apache/felix/org.apache.felix.ipojo.features/1.12.1/org.apache.felix.ipojo.features-1.12.1.xml
