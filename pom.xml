@@ -44,13 +44,15 @@
                     <useReferenceUrls>true</useReferenceUrls>
                     <!-- do not include build output directory -->
                     <includeBuildOutputDirectory>false</includeBuildOutputDirectory>
+                    <startupRepositories>
+                        <repository>mvn:org.apache.felix/org.apache.felix.ipojo.features/1.12.1/xml</repository>
+                    </startupRepositories>
                     <startupFeatures>
+                        <feature>shell-compat</feature>
                         <feature>ipojo-all</feature>
                         <feature>activemq-broker</feature>
                     </startupFeatures>
                     <startupBundles>
-                        <!--<bundle>mvn:${project.groupId}/actor-server-api/${project.version}</bundle>-->
-                        <!--<bundle>mvn:${project.groupId}/actor-server-akka/${project.version}</bundle>-->
                         <!-- External -->
                         <bundle>mvn:com.typesafe/config/${version.typesafe.config}</bundle>
                         <bundle>mvn:io.netty/netty/${version.netty}</bundle>
@@ -96,21 +98,10 @@
         <!-- features -->
         <dependency>
             <groupId>org.apache.felix</groupId>
-            <artifactId>org.apache.felix.ipojo</artifactId>
+            <artifactId>org.apache.felix.ipojo.features</artifactId>
             <version>${version.ipojo}</version>
-            <classifier>features</classifier>
             <type>xml</type>
         </dependency>
-        <!-- dependency>
-            <groupId>org.apache.felix</groupId>
-            <artifactId>org.apache.felix.ipojo.gogo</artifactId>
-            <version>${version.ipojo}</version>
-        </dependency -->
-        <!-- dependency>
-            <groupId>org.apache.felix</groupId>
-            <artifactId>org.apache.felix.gogo.command</artifactId>
-            <version>${version.gogo.command}</version>
-        </dependency -->
 
         <dependency>
             <groupId>org.apache.activemq</groupId>
@@ -119,11 +110,6 @@
             <classifier>features</classifier>
             <type>xml</type>
         </dependency>
-        <!-- dependency>
-            <groupId>org.apache.activemq</groupId>
-            <artifactId>activemq-osgi</artifactId>
-            <version>${version.activemq}</version>
-        </dependency -->
 
         <!-- deps -->
         <!-- project -->
